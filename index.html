@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinta Sekolah Kita</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+            overflow-x: hidden;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            animation: fadeInDown 2s ease;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .gallery img {
+            width: 300px;
+            border-radius: 20px;
+            margin: 15px;
+            animation: fadeInUp 2s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        audio {
+            display: block;
+            margin: 20px auto;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cinta Kita di Sekolah</h1>
+
+    <!-- Autoplay backsound romantis -->
+    <audio id="backsound" src="song.mp3" autoplay loop muted preload="auto" oncanplay="this.muted=false;"></audio>
+
+    <!-- Suara "aku sayang kamu" -->
+    <audio id="ucapan" src="aku_sayang_kamu.mp3" preload="auto" controls></audio>
+
+    <!-- Galeri Foto -->
+    <div class="gallery">
+        <img src="foto1.jpg" alt="Foto Kenangan">
+    </div>
+</body>
+</html>
